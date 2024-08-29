@@ -1,0 +1,91 @@
+@use "../../foundation/setting" as *;
+
+.pc {
+  display: block;
+}
+
+.pc_inlineB {
+  display: inline-block;
+}
+
+.sp,
+.sp_f
+.sp_il {
+  display: none !important;
+}
+
+.op0 {
+  opacity: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block !important;
+  }
+  .sp_f{
+    display:flex !important;
+  }
+
+  .to_inline {
+    display: inline-block !important;
+  }
+
+  .to_clm {
+    flex-direction: column !important;
+  }
+
+  .to_clmR {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+  }
+
+  .clm_to_row {
+    flex-direction: row !important;
+  }
+
+  .clm_to_row_r {
+    flex-direction: row-reverse !important;
+  }
+
+  .to_x_start {
+    justify-content: start !important;
+  }
+
+  .to_x_end {
+    justify-content: end !important;
+  }
+
+  .to_y_start {
+    align-items: start !important;
+  }
+
+  .to_y_end {
+    align-items: end !important;
+  }
+
+  .to_w100p {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .to_op1 {
+    opacity: 1;
+  }
+
+  .to_op0 {
+    opacity: 0;
+  }
+  .to_txt_c{
+    text-align: center;
+  }
+  .to_m0{
+    margin: 0;
+  }
+  .to_mA{
+    margin: auto !important;
+  }
+}

@@ -1,0 +1,215 @@
+@charset "utf-8";
+@use "../../foundation/setting" as *;
+
+//-----------------------------------------------------------------
+//display
+//-----------------------------------------------------------------
+.inline {
+  display: inline !important;
+}
+.inline_b {
+  display: inline-block !important;
+}
+
+.sp {
+  display: none !important;
+
+  @include smMax {
+    display: block;
+  }
+}
+.sp_flex {
+  display: none !important;
+
+  @include smMax {
+    display: flex !important;
+  }
+}
+
+.pc {
+  display: block;
+
+  @include smMax {
+    display: none !important;
+  }
+}
+.pc_flex {
+  display: flex;
+
+  @include smMax {
+    display: none !important;
+  }
+}
+
+.u-xs-min {
+  @include xsMax {
+    display: none !important;
+  }
+}
+
+.u-xs-max {
+  @include xsMin {
+    display: none !important;
+  }
+}
+
+.u-sm-min {
+  @include smMax {
+    display: none !important;
+  }
+}
+
+.u-sm-max {
+  @include smMin {
+    display: none !important;
+  }
+}
+
+.u-md-min {
+  @include mdMax {
+    display: none !important;
+  }
+}
+
+.u-md-max {
+  @include mdMin {
+    display: none !important;
+  }
+}
+
+.u-lg-min {
+  @include lgMax {
+    display: none !important;
+  }
+}
+
+.u-lg-max {
+  @include lgMin {
+    display: none !important;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inl_block {
+  display: inline-block;
+}
+
+.flex,
+.wrap,
+.between,
+.around,
+.evenly,
+.column,
+.clm_to_row,
+.clm_to_row_r,
+.to_clm,
+.to_clmR,
+.x_start,
+.x_end,
+.x_start_to_end,
+.x_end_to_start,
+.y_start,
+.y_end,
+.y_start_to_end,
+.y_end_to_start,
+.f_cc,
+.f_xc,
+.f_yc,
+.f_1 {
+  display: flex;
+}
+
+.column,
+.clm_to_row,
+.clm_to_row_r {
+  flex-direction: column;
+}
+
+.clm_to_row {
+  @include smMax {
+    flex-direction: row;
+  }
+}
+
+.clm_to_rowR {
+  @include smMax {
+    flex-direction: row-reverse;
+  }
+}
+
+.to_clm {
+  @include smMax {
+    flex-direction: column;
+  }
+}
+
+.to_clmR {
+  @include smMax {
+    flex-direction: column-reverse;
+  }
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.evenly {
+  justify-content: space-evenly;
+}
+
+.f_cc {
+  align-items: center;
+  justify-content: center;
+}
+
+.f_xc {
+  justify-content: center;
+
+  &.to_clm,
+  .to_clmR {
+    @include smMax {
+      justify-content: unset;
+      align-items: center;
+    }
+  }
+}
+
+.x_start {
+  justify-content: flex-start;
+}
+
+.x_end {
+  justify-content: flex-end;
+}
+
+.f_yc {
+  align-items: center;
+}
+
+.y_start {
+  align-items: flex-start;
+}
+
+.y_end {
+  align-items: flex-end;
+}
+
+.f_1 {
+  flex: 1;
+}
+

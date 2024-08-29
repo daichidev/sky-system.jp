@@ -1,0 +1,65 @@
+@charset "utf-8";
+@use "../foundation/setting" as *;
+//==========================================================================
+//_l-footer.scss
+//==========================================================================
+footer {
+    font-size: 1.6rem;
+    background: #000;
+    a,
+    p {
+        color: #fff !important;
+        display: block;
+        transition: all 0.6s linear;
+    }
+    a {
+        &:hover {
+            color: hsl(209, 100%, 79%);
+        }
+    }
+    .footer__inner {
+        width: clamp(320px, 100%, 550px);
+        column-gap: 3em;
+        padding: 3rem 0;
+        margin: auto;
+        .link_blocks__wrap {
+            column-gap: 3em;
+            margin-bottom: 3rem;
+        }
+        .logo__wrap {
+            width: 30%;
+            row-gap: 1em;
+            p {
+            }
+            .sns__wrap {
+                li {
+                    width: 25%;
+                }
+            }
+        }
+        .links__wrap {
+            column-gap: 2em;
+            row-gap: 1.5em;
+            .links_block {
+                > a {
+                    font-weight: bold;
+                    margin-bottom: 1em;
+                }
+                ul {
+                    row-gap: 1em;
+                    padding-left: 1rem;
+                }
+            }
+        }
+        .logo_footer{
+            width: 120px;
+            margin: 2em auto;
+        }
+        .copy {
+            color: #fff;
+        }
+    }
+}
+#shadow-host-companion {
+    display: none;
+}
